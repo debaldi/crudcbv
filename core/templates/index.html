@@ -2,6 +2,8 @@
 {% load humanize %}
 
 {% block content %}
+<body>
+<a class="btn btn-primary" href="http://127.0.0.1:8000/add">Adicionar Itens</a>
   <div class="row">
     <h1>Produtos</h1>
     <table class="table table-striped">
@@ -27,5 +29,10 @@
         {% endfor %}
       </tbody>
     </table>
+
+   {% include 'paginacao.html'%}
+
   </div>
+
+</body>
 {% endblock %}

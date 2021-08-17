@@ -13,6 +13,10 @@ class IndexView(ListView):
     queryset = Produto.objects.all()
     # 'produtos' - é o for da página index
     context_object_name = 'produtos'
+    # Paginação
+    paginate_by = 3
+    # Ordenação
+    ordering = 'id'
 
 
 class CreateProdutoView(CreateView):
